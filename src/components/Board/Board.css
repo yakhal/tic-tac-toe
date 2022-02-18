@@ -1,0 +1,5 @@
+/* For Board Component */
+.board{
+  display: flex;
+  justify-content: center;
+}

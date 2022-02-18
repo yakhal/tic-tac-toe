@@ -1,0 +1,15 @@
+/* For Square Component */
+.square{
+  margin: 5px 4px;
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square img{
+  display: block;
+}
