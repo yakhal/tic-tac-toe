@@ -3,13 +3,16 @@ import Cross from "./cross";
 import "./Square.css";
 
 function Square(props){
+    const callBackFn = () => {
+        props.changeGameState(props.id)
+    }
     if (props.value === null){
         return (
-            <div className="square"></div>
+            <div onClick={callBackFn} className="square"></div>
         )
     }
     return (
-        <div className="square">{props.value ? <Cross/> : <Circle/>}</div>
+        <div onClick={callBackFn} className="square">{props.value ? <Cross/> : <Circle/>}</div>
     )
 }
 
