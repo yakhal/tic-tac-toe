@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRotateRight } from '@fortawesome/free-solid-svg-icons';
+import GameResult from './GameResult'
 import "./GameStatus.css";
 
 function GameStatus(props) {
@@ -14,20 +15,21 @@ function GameStatus(props) {
       </p>);
   // If Game is over
   else {
-    // If no winner (null) --> Draw, else --> Declare winner
     element =
-      (<p>
-        {props.winner === null ?
-          "Draw!" :
-          <span className={props.winner ? "red" : "blue"}>
-            Player {props.winner ? "X" : "O"} won!
-          </span>}
-      </p>);
+      (
+        <GameResult winner={props.winner} resetGame={props.resetGame}></GameResult>
+      );
   }
+
+  // Reset Button will be displayed based on whether the Game is over or not
   return (
     <div className="status">
       {element}
-      <button onClick={props.resetGame}><FontAwesomeIcon icon={faArrowRotateRight} /> Reset</button>
+      {
+        !props.isGameOver
+        &&
+        <button onClick={props.resetGame}><FontAwesomeIcon icon={faArrowRotateRight} /> Reset</button>
+      }
     </div>
   );
 }

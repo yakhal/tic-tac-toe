@@ -1,0 +1,42 @@
+.overlay{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}
+
+.overlay .game-result{
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 5em;
+    padding: 40px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+    /* Animation Code */
+    animation-duration: 0.4s;
+    animation-name: slidein;
+}
+
+/* Animation Function used in .overlay .game-result */
+@keyframes slidein {
+    from{
+        top: -500px;
+    }
+    to{
+        top: 0;
+    }
+}
+
+.overlay .game-result p{
+    font-size: 2rem;
+}
+
+.overlay .game-result button{
+    color: white;
+    background-color: green;
+}

@@ -1,19 +1,21 @@
 /* For GameStatus Component */
 .status {
+  margin-top: 1em;
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
 }
 
 .status p{
-  margin-top: 1em;
-  font-size: 1.5rem;
+  margin: 0.5em 0;
+  font-size: 1.8rem;
 }
 
 .status button{
   padding: 0.5em 0.9em;
   font-size: 1.5rem;
   font-family: inherit;
-  background-color: #94a3b8;
+  background-color: #ffe387;
+  border-radius: 5px;
 }
 
 /* Utility to indicate player color */

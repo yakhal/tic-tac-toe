@@ -26,7 +26,7 @@ class Game extends React.Component {
             // Make changes only when cell value is null
             if (newState.board[index] === null) {
                 newState.board[index] = newState.nextTurn;
-                // Get Winner 
+                // Get Winner <-- Number 1 for X and 0 for O
                 newState.winner = this.checkWinner(newState.board);
                 newState.nextTurn = newState.nextTurn ? 0 : 1;
                 // Game is over - When board is full or winner exists
